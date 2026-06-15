@@ -1,0 +1,37 @@
+{
+  "name": "Monisha Bahuguna",
+  "tagline": "Strategic Communications & Public Relations",
+  "heroSubtitle": "Crafting narratives that move people, policies, and organisations forward.",
+  "location": "New Delhi, India",
+  "email": "monishabahuguna63@gmail.com",
+  "phone": "+91 89795 23284",
+  "linkedin": "https://www.linkedin.com/in/monisha-bahuguna/",
+  "bio": [
+    "I began my career as a reporter in Dehradun, writing about the mountains, the people, and the stories that rarely make it to national headlines. That instinct — to find the human thread inside complex systems — has shaped everything I've done since.",
+    "Over 8 years, I've led communications for government bodies, IITs, international development organisations, and a Bollywood production house. My work sits at the intersection of public health, governance, and storytelling — places where the right message at the right moment genuinely changes things.",
+    "I hold an MA in Media and Communication Studies from Doon University, and I've been published in national dailies, two anthologies, and peer-reviewed research. I speak the language of IAS officers, journalists, NGO partners, and startup founders — often in the same week."
+  ],
+  "skills": [
+    "Strategic Communication Planning",
+    "Public Relations & Media Relations",
+    "Crisis Communication",
+    "Public Health Communication",
+    "Policy Advocacy & Behaviour Change",
+    "Brand Visibility & Positioning",
+    "Speechwriting & Thought Leadership",
+    "Multi-Channel Campaigns",
+    "Content Creation & Storytelling",
+    "Stakeholder Engagement",
+    "Digital Analytics",
+    "Event Planning & Coordination"
+  ],
+  "stats": [
+    { "number": "8+", "label": "Years of Experience" },
+    { "number": "30+", "label": "Nations Reached" },
+    { "number": "1M+", "label": "Combined Social Reach" },
+    { "number": "20+", "label": "National Media Placements" },
+    { "number": "2", "label": "Published Books" },
+    { "number": "40+", "label": "Skills Across Disciplines" },
+    { "number": "1,200+", "label": "Startup Enrollments Driven" }
+  ]
+}

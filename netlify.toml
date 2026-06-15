@@ -1,0 +1,12 @@
+# Netlify configuration
+# This file tells Netlify how to handle the site
+
+[build]
+  publish = "."
+
+# Enable Netlify Identity for CMS login
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"

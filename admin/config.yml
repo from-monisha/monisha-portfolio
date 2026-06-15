@@ -1,0 +1,93 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  # ── HOMEPAGE SETTINGS ──────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Homepage Settings"
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "cms-data/homepage.json"
+        fields:
+          - { label: "Your Full Name", name: "name", widget: "string", hint: "e.g. Monisha Bahuguna" }
+          - { label: "One-Line Tagline", name: "tagline", widget: "string", hint: "e.g. Strategic Communications & Public Relations" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "string", hint: "The sentence under your tagline on the homepage" }
+          - { label: "Your Location", name: "location", widget: "string" }
+          - { label: "Email Address", name: "email", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+          - label: "About Me Bio"
+            name: "bio"
+            widget: "list"
+            hint: "Each item is one paragraph. Click + to add a paragraph."
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            hint: "Click + to add a skill. Each goes into a pill on the page."
+            field: { label: "Skill", name: "skill", widget: "string" }
+          - label: "Impact Numbers (the scrolling ticker)"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number (e.g. 8+)", name: "number", widget: "string" }
+              - { label: "Label (e.g. Years of Experience)", name: "label", widget: "string" }
+
+  # ── PROJECTS ───────────────────────────────────────────────
+  - name: "projects"
+    label: "💼 Projects / Work"
+    folder: "cms-data/projects"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "string", hint: "e.g. Governance & Policy, Entertainment PR, Crisis Communication" }
+      - { label: "Year", name: "year", widget: "string", hint: "e.g. 2023–2025" }
+      - { label: "Description", name: "description", widget: "text", hint: "2-3 sentences shown on hover" }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        hint: "Short labels like PR, Media, Government. Click + to add."
+        field: { label: "Tag", name: "tag", widget: "string" }
+      - label: "Project Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Upload a photo for this project card (JPG or PNG). If blank, a decorative placeholder shows."
+      - { label: "Display Order (1 = first)", name: "order", widget: "number", default: 99 }
+
+  # ── TESTIMONIALS ───────────────────────────────────────────
+  - name: "testimonials"
+    label: "💬 Testimonials"
+    folder: "cms-data/testimonials"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "name"
+    fields:
+      - { label: "Person's Name", name: "name", widget: "string" }
+      - { label: "Their Title / Role", name: "title", widget: "string" }
+      - { label: "Relationship to You", name: "relationship", widget: "string", hint: "e.g. Direct Manager at NCGG" }
+      - { label: "Their Quote", name: "quote", widget: "text", hint: "What they said about you. Don't include quotation marks." }
+      - { label: "Display Order (1 = first)", name: "order", widget: "number", default: 99 }
+
+  # ── PUBLICATIONS ───────────────────────────────────────────
+  - name: "publications"
+    label: "📝 Publications & Writing"
+    folder: "cms-data/publications"
+    create: true
+    slug: "{{slug}}"
+    identifier_field: "title"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Type", name: "type", widget: "select",
+          options: ["Published Book", "Co-authored Report", "Research Paper", "Journalism", "Column / Articles", "Documentation", "Other"] }
+      - { label: "Year", name: "year", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Display Order (1 = first)", name: "order", widget: "number", default: 99 }
